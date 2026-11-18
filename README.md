@@ -12,7 +12,7 @@ Projeto Integrador Extensionista II · ADS.
 
 1. Clone o repositório e entre na pasta:
    ```bash
-   git clone https://github.com
+   git clone https://github.com/Lulis2605/cristal.git
    cd cristal
    ```
 2. Instale as dependências:

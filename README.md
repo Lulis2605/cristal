@@ -13,7 +13,7 @@ Projeto Integrador Extensionista II · ADS.
 1. Clone o repositório e entre na pasta:
    ```bash
    git clone https://github.com
-   cd Cristal
+   cd cristal
    ```
 2. Instale as dependências:
    ```bash

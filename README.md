@@ -1,4 +1,4 @@
-﻿# ONG Cristal
+# ONG Cristal
 
 Sistema de gestão de doações para a ONG Cristal.
 Projeto Integrador Extensionista II · ADS.
@@ -13,7 +13,7 @@ Projeto Integrador Extensionista II · ADS.
 1. Clone o repositório e entre na pasta:
    ```bash
    git clone https://github.com
-   cd cristal
+   cd Cristal
    ```
 2. Instale as dependências:
    ```bash

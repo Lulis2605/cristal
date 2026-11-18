@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import { pool } from "./db.js";
+import { authRouter, exigirLogin } from "./auth.js";
 import doadoresRouter from "./routes/doadores.js";
 import itensRouter from "./routes/itens.js";
 import doacoesRouter from "./routes/doacoes.js";
@@ -22,9 +23,10 @@ app.get("/api/health", async (req, res, next) => {
   }
 });
 
-app.use("/api/doadores", doadoresRouter);
-app.use("/api/itens", itensRouter);
-app.use("/api/doacoes", doacoesRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/doadores", exigirLogin, doadoresRouter);
+app.use("/api/itens", exigirLogin, itensRouter);
+app.use("/api/doacoes", exigirLogin, doacoesRouter);
 
 app.use((err, req, res, _next) => {
   console.error(err);

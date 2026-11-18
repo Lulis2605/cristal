@@ -1,0 +1,45 @@
+@api = http://localhost:3000/api
+
+### Listar doadores (espera 200)
+GET {{api}}/doadores
+
+### Buscar doador por ID (espera 200)
+GET {{api}}/doadores/1
+
+### Cadastrar doador (espera 201)
+POST {{api}}/doadores
+Content-Type: application/json
+
+{
+  "nome": "Luciana Jordão",
+  "email": "lulisjordao@gmail.com",
+  "telefone": "14999252605"
+}
+
+### Cadastrar sem nome (espera 400)
+POST {{api}}/doadores
+Content-Type: application/json
+
+{
+  "email": "lulisjordao@gmail.com.com"
+}
+
+### Listar catálogo de itens (espera 200)
+GET {{api}}/itens
+
+### Listar doações (espera 200)
+GET {{api}}/doacoes
+
+### Registrar doação com itens (espera 201)
+POST {{api}}/doacoes
+Content-Type: application/json
+
+{
+  "id_doador": 1,
+  "data_doacao": "2026-10-22",
+  "observacao": "Arrecadação da ONG",
+  "itens": [
+    { "id_item": 1, "quantidade": 4 },
+    { "id_item": 2, "quantidade": 6 }
+  ]
+}
